@@ -26,7 +26,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Couple Massage.jpg",
+    image: "/services/COUPLE MASSAGE.jpg",
     category: 'Western Massage',
   },
   {
@@ -39,7 +39,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Deep Tissue Massage: Sports.jpg",
+    image: "/services/DEEP TISSUE MASSAGE: SPORTS.jpg",
     category: 'Western Massage',
   },
   {
@@ -52,7 +52,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Head, Neck & Shoulder.jpg",
+    image: "/services/HEAD, NECK & SHOULDER.jpg",
     category: 'Western Massage',
   },
   {
@@ -65,7 +65,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Balinese Massage.jpg",
+    image: "/services/BALINESE MASSAGE.jpg",
     category: 'Western Massage',
   },
   {
@@ -78,7 +78,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Lymphatic Massage.jpg",
+    image: "/services/LYMPHATIC MASSAGE.jpg",
     category: 'Western Massage',
   },
   {
@@ -91,7 +91,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Lomi Lomi Massage.jpg",
+    image: "/services/LOMI LOMI MASSAGE.jpg",
     category: 'Western Massage',
   },
   {
@@ -106,7 +106,7 @@ const mockServices = [
     midDuration: 90,
     maxDuration: 120,
     premiumDuration: 180,
-    image: "/services/Relaxing Massage.jpg",
+    image: "/services/RELAXING MASSAGE.jpg",
     category: 'Western Massage',
   },
   // Western Massages End
@@ -124,7 +124,7 @@ const mockServices = [
     midDuration: 60,
     maxDuration: 90,
     premiumDuration: 120,
-    image: "/services/Foot Massage.png",
+    image: "/services/FOOT MASSAGE.png",
     category: 'Oriental Massage',
   },
   {
@@ -137,7 +137,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Shaitsu Massage.jpg",
+    image: "/services/SHAITSU MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   {
@@ -150,7 +150,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Tui Na Massage.jpg",
+    image: "/services/TUI NA MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   {
@@ -163,7 +163,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Ayurveda Massage.jpg",
+    image: "/services/AYURVEDA MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   {
@@ -176,7 +176,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Thai Oil Massage.jpg",
+    image: "/services/THAI OIL MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   {
@@ -189,7 +189,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Thai Traditional Massage.jpg",
+    image: "/services/THAI TRADITIONAL MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   {
@@ -204,7 +204,7 @@ const mockServices = [
     midDuration: 60,
     maxDuration: 90,
     premiumDuration: 120,
-    image: "/services/Pregnancy Massage.jpg",
+    image: "/services/PREGNANCY MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   {
@@ -217,7 +217,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Oil Massage.jpg",
+    image: "/services/OIL MASSAGE.jpg",
     category: 'Oriental Massage',
   },
   // Oriental Massages End
@@ -235,7 +235,7 @@ const mockServices = [
     midDuration: 90,
     maxDuration: 120,
     premiumDuration: 180,
-    image: "/services/Hot Stone Massage.jpg",
+    image: "/services/HOT STONE MASSAGE.jpg",
     category: 'Special Massage',
   },
   {
@@ -250,7 +250,7 @@ const mockServices = [
     midDuration: 90,
     maxDuration: 120,
     premiumDuration: 180,
-    image: "/services/4 Hand Massage.jpg",
+    image: "/services/4 HAND MASSAGE.jpg",
     category: 'Special Massage',
   },
   {
@@ -265,7 +265,7 @@ const mockServices = [
     midDuration: 60,
     maxDuration: 90,
     premiumDuration: 120,
-    image: "/services/Oriental Facial Massage.jpg",
+    image: "/services/ORIENTAL FACIAL MASSAGE.jpg",
     category: 'Special Massage',
   },
   {
@@ -278,7 +278,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Candle Massage.webp",
+    image: "/services/CANDLE MASSAGE.webp",
     category: 'Special Massage',
   },
   {
@@ -291,7 +291,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Air Cupping Massage.jpg",
+    image: "/services/AIR CUPPING MASSAGE.jpg",
     category: 'Special Massage',
   },
   {
@@ -304,7 +304,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Aroma Therapy Massage.png",
+    image: "/services/AROMA THERAPY MASSAGE.png",
     category: 'Special Massage',
   },
   {
@@ -317,7 +317,7 @@ const mockServices = [
     minDuration: 60,
     midDuration: 90,
     maxDuration: 120,
-    image: "/services/Herbal Massage.jpg",
+    image: "/services/HERBAL MASSAGE.jpg",
     category: 'Special Massage',
   },
   {
@@ -330,7 +330,7 @@ const mockServices = [
     minDuration: 40,
     midDuration: 60,
     maxDuration: 90,
-    image: "/services/Sunburn Massage.png",
+    image: "/services/SUNBURN MASSAGE.png",
     category: 'Special Massage',
   },
   {
@@ -343,7 +343,7 @@ const mockServices = [
     minDuration: 40,
     midDuration: 60,
     maxDuration: 90,
-    image: "/services/Tanning Massage.png",
+    image: "/services/TANNING MASSAGE.png",
     category: 'Special Massage',
   },
 ]
