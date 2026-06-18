@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useSession } from '@/lib/auth-client'
 import { useRouter } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
@@ -10,7 +9,6 @@ import Image from 'next/image'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { data: session } = useSession()
   const router = useRouter()
 
   const navigationItems = [
@@ -62,45 +60,6 @@ export function Header() {
           ))}
         </div>
 
-        {/* Auth Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          {session?.user ? (
-            <>
-              <Link
-                href="/dashboard"
-                className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium"
-              >
-                Dashboard
-              </Link>
-              <button
-                onClick={async () => {
-                  await fetch('/api/auth/sign-out', { method: 'POST' })
-                  router.push('/')
-                  router.refresh()
-                }}
-                className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity text-sm font-medium"
-              >
-                Sign Out
-              </button>
-            </>
-          ) : (
-            <>
-              <Link
-                href="/sign-in"
-                className="px-4 py-2 text-primary hover:bg-secondary rounded-lg transition-colors text-sm font-medium"
-              >
-                Sign In
-              </Link>
-              <Link
-                href="/sign-up"
-                className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity text-sm font-medium"
-              >
-                Sign Up
-              </Link>
-            </>
-          )}
-        </div>
-
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -128,47 +87,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="border-t border-border pt-4 space-y-2">
-              {session?.user ? (
-                <>
-                  <Link
-                    href="/dashboard"
-                    className="block text-foreground/80 hover:text-primary"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Dashboard
-                  </Link>
-                  <button
-                    onClick={async () => {
-                      await fetch('/api/auth/sign-out', { method: 'POST' })
-                      router.push('/')
-                      router.refresh()
-                      setMobileMenuOpen(false)
-                    }}
-                    className="w-full text-left px-4 py-2 bg-primary text-primary-foreground rounded-lg"
-                  >
-                    Sign Out
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link
-                    href="/sign-in"
-                    className="block px-4 py-2 text-primary"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href="/sign-up"
-                    className="block px-4 py-2 bg-primary text-primary-foreground rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Sign Up
-                  </Link>
-                </>
-              )}
-            </div>
           </div>
         </motion.div>
       )}

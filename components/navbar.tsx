@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, LogOut, User } from 'lucide-react'
-import { authClient } from '@/lib/auth-client'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
@@ -16,12 +15,6 @@ interface NavbarProps {
 export function Navbar({ isLoggedIn = false, userName = '' }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
-
-  const handleLogout = async () => {
-    await authClient.signOut()
-    router.push('/')
-    router.refresh()
-  }
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -65,44 +58,7 @@ export function Navbar({ isLoggedIn = false, userName = '' }: NavbarProps) {
               </Link>
             ))}
           </div>
-
-          {/* Auth Section */}
-          <div className="hidden md:flex items-center gap-4">
-            {isLoggedIn ? (
-              <div className="flex items-center gap-4">
-                <Link
-                  href="/profile"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors text-sm font-medium"
-                >
-                  <User className="w-4 h-4" />
-                  {userName}
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 hover:bg-destructive/20 text-destructive transition-colors text-sm font-medium"
-                >
-                  <LogOut className="w-4 h-4" />
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div className="flex items-center gap-3">
-                <Link
-                  href="/sign-in"
-                  className="px-4 py-2 text-foreground hover:text-primary transition-colors text-sm font-medium"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/sign-up"
-                  className="px-6 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
-                >
-                  Sign Up
-                </Link>
-              </div>
-            )}
-          </div>
-
+       
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
@@ -133,35 +89,6 @@ export function Navbar({ isLoggedIn = false, userName = '' }: NavbarProps) {
                 {item.label}
               </Link>
             ))}
-            {isLoggedIn ? (
-              <button
-                onClick={() => {
-                  handleLogout()
-                  setIsOpen(false)
-                }}
-                className="w-full text-left px-4 py-2 text-destructive hover:bg-destructive/10 rounded transition-colors text-sm font-medium flex items-center gap-2"
-              >
-                <LogOut className="w-4 h-4" />
-                Logout
-              </button>
-            ) : (
-              <>
-                <Link
-                  href="/sign-in"
-                  className="block px-4 py-2 text-foreground/80 hover:text-primary hover:bg-secondary/50 rounded transition-colors text-sm font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/sign-up"
-                  className="block px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded transition-colors text-sm font-medium text-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Sign Up
-                </Link>
-              </>
-            )}
           </motion.div>
         )}
       </div>
