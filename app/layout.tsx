@@ -8,9 +8,9 @@ const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-mono' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' })
 
 export const metadata: Metadata = {
-  title: 'Serenity Spa | Premium Massage & Wellness',
-  description: 'Experience ultimate relaxation at Serenity Spa. Book luxurious massages, wellness treatments, and spa services. Gift cards available.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://ancientherbalspa.com'),
+  title: 'Ancient Herbal Spa | Premium Massage & Wellness',
+  description: 'Experience ultimate relaxation at Ancient Herbal Spa. Book luxurious massages, wellness treatments, and spa services. Gift cards available.',
   icons: {
     icon: [
       {
